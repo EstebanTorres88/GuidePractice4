@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/product")
 public class ProductController {
 
 
@@ -27,7 +27,7 @@ public class ProductController {
 
 
 
-    @GetMapping("path")
+    @GetMapping
     public ResponseEntity<List<ProductResponseModel>>findAll() {
         return ResponseEntity.ok(productMapper.toProductResponseModelList(productFacade.getAll()));
     }
